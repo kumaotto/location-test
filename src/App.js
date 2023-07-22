@@ -1,22 +1,34 @@
-import { useEffect } from 'react';
-import { createMap } from "maplibre-gl-js-amplify";
+import { useState } from 'react';
 import { Amplify } from 'aws-amplify'
+import { MapView, LocationSearch } from '@aws-amplify/ui-react-geo';
 import awsconfig from './aws-exports';
-import "maplibre-gl/dist/maplibre-gl.css";
+import '@aws-amplify/ui-react-geo/styles.css';
+import 'maplibre-gl/dist/maplibre-gl.css'
+import '@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css'
+import 'maplibre-gl-js-amplify/dist/public/amplify-geocoder.css'
 
-// Amplify の設定を読み込み
+// setting Amplify
 Amplify.configure(awsconfig);
 
 function App() {
-  useEffect(() => {
-    createMap({
-      container: "map", // An HTML Element or HTML element ID to render the map in https://maplibre.org/maplibre-gl-js-docs/api/map/
-      center: [139.7674681227469, 35.68111419325676], // 東京駅
-      zoom: 14,
-  })
-  }, []);
+
+  const [{ latitude, longitude }] = useState({
+    latitude: 40,
+    longitude: -100,
+  });
+
   return (
-    <div id="map" style={{height: '100vh'}}/>
+    <div>
+      <MapView
+        initialViewState={{
+          latitude: 37.8,
+          longitude: -122.4,
+          zoom: 14,
+        }}
+      >
+        <LocationSearch />
+      </MapView>
+    </div>
   );
 }
 

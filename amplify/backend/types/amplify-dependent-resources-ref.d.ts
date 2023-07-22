@@ -11,13 +11,23 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "geo": {
-    "map7db674d7": {
+    "mapd4542e1e": {
       "Arn": "string",
       "Name": "string",
       "Region": "string",
       "Style": "string"
     },
-    "mapa866d2b4": {
+    "placeIndex3c7276b2": {
+      "Arn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "placeIndexd0f3ad22": {
+      "Arn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "testmap": {
       "Arn": "string",
       "Name": "string",
       "Region": "string",

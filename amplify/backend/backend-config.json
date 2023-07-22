@@ -26,23 +26,7 @@
     }
   },
   "geo": {
-    "map7db674d7": {
-      "accessType": "AuthorizedAndGuestUsers",
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "routesuggestion86fce3f2"
-        }
-      ],
-      "isDefault": false,
-      "mapStyle": "VectorEsriStreets",
-      "providerPlugin": "awscloudformation",
-      "service": "Map"
-    },
-    "mapa866d2b4": {
+    "mapd4542e1e": {
       "accessType": "AuthorizedAndGuestUsers",
       "dependsOn": [
         {
@@ -54,7 +38,57 @@
         }
       ],
       "isDefault": true,
-      "mapStyle": "VectorEsriStreets",
+      "mapStyle": "VectorHereExploreTruck",
+      "providerPlugin": "awscloudformation",
+      "service": "Map"
+    },
+    "placeIndex3c7276b2": {
+      "accessType": "AuthorizedAndGuestUsers",
+      "dataProvider": "Here",
+      "dataSourceIntendedUse": "SingleUse",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "routesuggestion86fce3f2"
+        }
+      ],
+      "isDefault": false,
+      "providerPlugin": "awscloudformation",
+      "service": "PlaceIndex"
+    },
+    "placeIndexd0f3ad22": {
+      "accessType": "AuthorizedAndGuestUsers",
+      "dataProvider": "HERE",
+      "dataSourceIntendedUse": "SingleUse",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "routesuggestion86fce3f2"
+        }
+      ],
+      "isDefault": true,
+      "providerPlugin": "awscloudformation",
+      "service": "PlaceIndex"
+    },
+    "testmap": {
+      "accessType": "AuthorizedAndGuestUsers",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "routesuggestion86fce3f2"
+        }
+      ],
+      "isDefault": false,
+      "mapStyle": "VectorHereExploreTruck",
       "providerPlugin": "awscloudformation",
       "service": "Map"
     }
