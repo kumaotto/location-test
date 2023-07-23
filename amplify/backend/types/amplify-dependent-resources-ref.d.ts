@@ -8,10 +8,13 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"
+    },
+    "userPoolGroups": {
+      "amplifygepGroupRole": "string"
     }
   },
   "geo": {
-    "mapd4542e1e": {
+    "map10c1873b": {
       "Arn": "string",
       "Name": "string",
       "Region": "string",

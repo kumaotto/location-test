@@ -64,6 +64,9 @@
     }
   },
   "Parameters": {
+    "authuserPoolGroupsamplifygepGroupRole": {
+      "Type": "String"
+    },
     "authroutesuggestion86fce3f2UserPoolId": {
       "Type": "String"
     },
@@ -290,6 +293,17 @@
           },
           {
             "Ref": "unauthRoleName"
+          },
+          {
+            "Fn::Join": [
+              "-",
+              [
+                {
+                  "Ref": "authroutesuggestion86fce3f2UserPoolId"
+                },
+                "amplifygepGroupRole"
+              ]
+            ]
           }
         ]
       }
