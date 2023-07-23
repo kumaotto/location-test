@@ -75,22 +75,6 @@
       "isDefault": true,
       "providerPlugin": "awscloudformation",
       "service": "PlaceIndex"
-    },
-    "testmap": {
-      "accessType": "AuthorizedAndGuestUsers",
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "routesuggestion86fce3f2"
-        }
-      ],
-      "isDefault": false,
-      "mapStyle": "VectorHereExploreTruck",
-      "providerPlugin": "awscloudformation",
-      "service": "Map"
     }
   }
 }
